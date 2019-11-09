@@ -32,3 +32,5 @@
 4. Add all file you need and update with git button.  
 
 ![](./Attachment/Rstudiogit.png)
+
+**Attention:** Please don't forget to git push after you add your commit information.
