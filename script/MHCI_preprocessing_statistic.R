@@ -6,7 +6,7 @@
 # About project: This for MHCI data preprocessing 
 # 
 require(dplyr)
-basic_path = "/Users/yujijun/Documents/01-Work/04-Neonatigen/neoantigen_data/MHCI_binding_prediction/original_data/"
+basic_path = "./data_project/MHCI_binding_prediction/original_data/"
 file_list = list.files(basic_path)
 ANN_2006 = read.table(paste(basic_path, file_list[2],sep = "/"),row.names = NULL,header = T)
 ARB_2006 = read.table(paste(basic_path, file_list[3],sep = "/"),row.names = NULL,header = T)
@@ -38,10 +38,10 @@ MHCI_2013 = benchmark_MHCI_2013[,c("species","mhc","sequence","peptide_length","
 colnames(MHCI_2013) = c("species","allele","sequence","length","inequality","ic50")
 MHCI_2013$allele = gsub("[*]","-",MHCI_2013$allele) #replace the * to "-", make MHCI2009 == MHCI2013
 
-#statistic of data 
-MHCI_2006_sta = as.data.frame(table(MHCI_2006$species));colnames(MHCI_2006_sta) <- c("species","Frequency")
+#statistic
+MHCI_2006_sta = as.data.frame(table(MHCI_2006$species));colnames(MHCI_2006_sta) <- c("species","Frequency") #Just statistic for species
 group_2006 <- MHCI_2006 %>% group_by(species,allele)
-MHCI_2006_sta_detail = as.data.frame(summarise(group_2006,count= n()))
+MHCI_2006_sta_detail = as.data.frame(summarise(group_2006,count= n())) #statistic for species and alleles
 
 MHCI_2009_sta = as.data.frame(table(MHCI_2009$species));colnames(MHCI_2009_sta) <- c("species","Frequency")
 group_2009 <- MHCI_2009 %>% group_by(species,allele)
