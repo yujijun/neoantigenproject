@@ -19,8 +19,10 @@ benchmark_MHCI_2009 <- benchmark_MHCI_2009 %>% add_column(MHC_Type = MHC_Type,.b
 benchmark_MHCI_2009 <- benchmark_MHCI_2009[,-6]
 
 benchmark_MHCI_2013 <- read.table(paste(basic_path,file_list[9],sep = "/"),row.names = NULL,header = T)
+benchmark_MHCI_2013$MHC_Allele <- gsub("HLA-A[*]03[/]11","HLA-A*0311",benchmark_MHCI_2013$MHC_Allele)
+#benchmark_MHCI_2013$MHC_Allele <- gsub("HLA-Cw[*][*]","HLA-Cw*",benchmark_MHCI_2013$MHC_Allele)
 MHC_Type <- gsub("[*][0-9a-zA-Z]+","",benchmark_MHCI_2013$MHC_Allele)
-benchmark_MHCI_2013 <- benchmark_MHCI_2013 %>% add_column(MHC_Type = MHC_Type,.before=2)
+benchmark_MHCI_2013$MHC_Type <- MHC_Type
 
 output_path <- "./data_project/MHCI_binding_prediction/revision_data/"
 write.table(benchmark_MHCI_2006, file=paste(output_path, "benchmark_MHCI_2006.txt",sep = "/"),quote = F,sep = "\t",row.names = F)
