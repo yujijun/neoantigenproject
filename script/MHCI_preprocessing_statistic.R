@@ -44,11 +44,7 @@ mhc_allele = paste(mhc_allele[,1],paste(mhc_allele[,2],mhc_allele[,3],sep = "*")
 #handle some specific mhc_allele
 specific_MHC = grep("[*]$",unique(mhc_allele),value = T)
 specific_MHC = as.vector(str_split_fixed(specific_MHC,"[*]",n=2)[,1])
-#????If we can use format function in gsub
-# for(i in specific_MHC){
-#   print(i)
-#   mhc_allele = gsub("%s[*]" %i, "%s" %i,mhc_allele)
-# }
+
 mhc_allele = gsub("ELA-A1[*]","ELA-A*1",mhc_allele)
 mhc_allele = gsub("HLA-A11[*]","HLA-A*11",mhc_allele)
 mhc_allele = gsub("HLA-A2[*]","HLA-A*02",mhc_allele)
