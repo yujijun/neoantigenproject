@@ -17,10 +17,17 @@ IEDB_Tcell <-
   read.table('./data-raw/IEDB_Tcell.txt',sep = "\t",fill = T)
 usethis::use_data(IEDB_Tcell)
 
+CNRD_MHC_Ligand <- 
+  read.delim('./data-raw/mhc_ligand_full_CNRD.csv',sep = ",",header = T,fill = T,comment.char = "")
+usethis::use_data(CNRD_MHC_Ligand,overwrite = T)
 
+CNRD_Neoantigen <- 
+  read.delim('./data-raw/Neoantigen_CNRD.csv',sep = ",",header = T,fill = T,comment.char = "")
+usethis::use_data(CNRD_Neoantigen,overwrite = T)
 
-
-
+CNRD_Tcell <- 
+  read.delim('./data-raw/tcell_full_v3_CNRD.csv',sep = ",",header = T,fill = T,comment.char = "")
+usethis::use_data(CNRD_Tcell,overwrite = T)
 
 
 require(dplyr)
