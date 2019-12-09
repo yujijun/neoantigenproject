@@ -41,3 +41,13 @@
 **Attention:** Please don't forget to git push after you add your commit information.  
 
 **Contact:** If their are any question, please file free to contact with author:jijunyu140@gmail.com
+
+
+
+
+## Description about odd peptide:
+1. mhc_ligand_full_select_col.csvstrange_peptide.csv
+1.1 For all peptides in Epitope_Description column with "[+]", I only kept the first half of the peptide： For example:changed the peptide from "	MLVLLV + FORM(M1)" to "MLVLLV", And I put them into "peptide_change" column; For this kind of situation, There is no need to change classification of peptide but just keeping original classifcation situation.
+![](./Attachment/odd_peptide2.png)
+1.2 For all peptides in Epitope_Description column with "-" and complex form, There is no need to change anything but we need to change all of them into other's classification. For example:
+![](./Attachment/odd_peptide1.png)
