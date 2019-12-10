@@ -50,7 +50,6 @@
 
 1.1 For all peptides in Epitope_Description column with "[+]", I only kept the first half of the peptide： For example:changed the peptide from "	MLVLLV + FORM(M1)" to "MLVLLV", And I put them into "peptide_change" column; For this kind of situation, There is no need to change classification of peptide but just keeping original classifcation situation.  
 
-1. mhc_ligand_full_select_col.csvstrange_peptide.csv  
 
 1.1 For all peptides in Epitope_Description column with "[+]", I only kept the first half of the peptide： For example:changed the peptide from "	MLVLLV + FORM(M1)" to "MLVLLV", And I put them into "peptide_change" column; For this kind of situation, There is no need to change classification of peptide but just keeping original classifcation situation.  
 
@@ -58,7 +57,6 @@
 
 1.2 For all peptides in Epitope_Description column with "-" and complex form, There is no need to change anything but we need to change all of them into other's classification. For example:  
 
-<<<<<<< HEAD
 ![](./Attachment/odd_peptide1.png)  
 
 By the way, I also put the changed matrix into a new file, which was named as mhc_ligand_full_select_col.csvstrange_peptide_v2.tsv  
@@ -75,12 +73,14 @@ By the way, I also put the changed matrix into a new file, which was named as mh
 
 By the way, I also put the changed matrix into a new file, which was named as ancerPPD_CNRD_strange_peptide_v2.csv  
 
-**3. tcell_full_v3_select_col.csvstrange_peptide.csv**
-The description of this file is same as 2
+**3. tcell_full_v3_select_col.csvstrange_peptide.csv**  
+
+The description of this file is same as 2;
 by the way,I also put the changed matrix into a new file, which was named as tcell_full_v3_select_col.csvstrange_peptide_v2.tsv  
 
-**4. Neoantigen_CNRD.csvstrange_peptide_v2.tsv **
-The description of this file is same as 2, A position we need to pay attention to is we need to split the original peptide into two peptide, for example: ALWPWLLMA(T) to ALWPWLLMA/ALWPWLLMT, So after preprocessing, we can get ten peptides now.  
+**4. Neoantigen_CNRD.csvstrange_peptide_v2.tsv **  
+The description of this file is same as 2;  
+A position we need to pay attention to is we need to split the original peptide into two peptide, for example: ALWPWLLMA(T) to ALWPWLLMA/ALWPWLLMT, So after preprocessing, we can get ten peptides now.  
 
 ![](./Attachment/Neoantigen_oddpeptide.png)  
 
@@ -89,8 +89,8 @@ by the way,I also put the changed matrix into a new file, which was named as  Ne
 **5. TCGA_TCR_seq_CNRD_strange_peptide.csv**
 We don't need Peptide columns, we Just write it as "CDR3AA", Then if the CDR3AA is wired, Just delete them.
 
-![](./Attachment/TCGA.png)
-=======
+![](./Attachment/TCGA.png)  
+
 ![](./Attachment/odd_peptide1.png)
 
 
