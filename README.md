@@ -46,14 +46,24 @@
 
 
 ## Description about odd peptide:
+<<<<<<< HEAD
 **1. mhc_ligand_full_select_col.csvstrange_peptide.csv**
 
 1.1 For all peptides in Epitope_Description column with "[+]", I only kept the first half of the peptide： For example:changed the peptide from "	MLVLLV + FORM(M1)" to "MLVLLV", And I put them into "peptide_change" column; For this kind of situation, There is no need to change classification of peptide but just keeping original classifcation situation.  
 
+=======
+1. mhc_ligand_full_select_col.csvstrange_peptide.csv  
+
+1.1 For all peptides in Epitope_Description column with "[+]", I only kept the first half of the peptide： For example:changed the peptide from "	MLVLLV + FORM(M1)" to "MLVLLV", And I put them into "peptide_change" column; For this kind of situation, There is no need to change classification of peptide but just keeping original classifcation situation.  
+
+
+![](./Attachment/Rstudiogit.png)
+>>>>>>> 5ec5b1894f33f17eca868a4d6beabad52ba05a50
 ![](./Attachment/odd_peptide2.png)  
 
 1.2 For all peptides in Epitope_Description column with "-" and complex form, There is no need to change anything but we need to change all of them into other's classification. For example:  
 
+<<<<<<< HEAD
 ![](./Attachment/odd_peptide1.png)  
 
 By the way, I also put the changed matrix into a new file, which was named as mhc_ligand_full_select_col.csvstrange_peptide_v2.tsv  
@@ -85,3 +95,18 @@ by the way,I also put the changed matrix into a new file, which was named as  Ne
 We don't need Peptide columns, we Just write it as "CDR3AA", Then if the CDR3AA is wired, Just delete them.
 
 ![](./Attachment/TCGA.png)
+=======
+![](./Attachment/odd_peptide1.png)
+
+
+## Description of odd disease
+1. This is a description of odd disease, we should classify all disease as tissue, detail as follow:
+![](./Attachment/cancername.png)
+
+2. For file: Neoantigen_CNRD.csv_disease_v2.csv
+we need to seperate each peptide into different tissue and then classify it.
+
+If you have any question: please feel free to connect me:jijunyu140@gmail.com.
+
+
+

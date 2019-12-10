@@ -59,4 +59,6 @@ copy_neo <- neoantigen
 neoantigen$peptide_change = gsub(" *\\(.*?\\) *", "",neoantigen$Peptide)
 write.table(neoantigen,file = paste(odd.pep.path,"Neoantigen_CNRD.csvstrange_peptide_v2.tsv",sep = "/"),quote = F, row.names = F,sep = "\t")
 
+#TCGA
+TCGA <- read.csv(paste(odd.pep.path,"TCGA_TCR_seq_CNRD_strange_peptide.csv",sep = "/"),stringsAsFactors = F)
 
