@@ -62,3 +62,4 @@ write.table(neoantigen,file = paste(odd.pep.path,"Neoantigen_CNRD.csvstrange_pep
 #TCGA
 TCGA <- read.csv(paste(odd.pep.path,"TCGA_TCR_seq_CNRD_strange_peptide.csv",sep = "/"),stringsAsFactors = F)
 
+

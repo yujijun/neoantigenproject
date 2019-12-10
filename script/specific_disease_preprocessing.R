@@ -31,5 +31,19 @@ gdc <- read.table(paste(odd.dis.path,"gdc_manifest.kraken_info.txt_disease_v2.ts
 neoantigen_tissue <- str_to_lower(gsub(" ","",unique(as.vector(str_split_fixed(neoantigen$change.as,",",n = Inf)))))
 gdc_tissue <- str_to_lower(gsub(" ","",gdc$tissue))
 cancerppd_tissue <- str_to_lower(gsub(" ","",cancerppd$tissue))
-
 sort(unique(c(neoantigen_tissue,gdc_tissue,cancerppd_tissue)))
+
+
+#gene_name 
+odd.dis.path <- "./data_project"
+gene_name <- read.csv(paste(odd.dis.path,"get_gene_name.csv",sep = "/"))
+
+basic_name <- read.table(paste(odd.dis.path,"uniprotID_to_genename.txt",sep = "/"),sep = "\t",fill = T,header = T)
+
+gene_name_ncbi <- gene_name[grep("ncbi",gene_name$Protein_IRI),]
+gene_name_uniport <- gene_name[grep("uniprot",gene_name$Protein_IRI),]
+
+write(as.vector(gene_name_uniport$id),"./data_project/uniprotID.txt")
+write(as.vector(gene_name_ncbi$id),"./data_project/ncbiID.txt")
+
+
